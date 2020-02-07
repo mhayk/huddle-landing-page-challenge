@@ -17,7 +17,7 @@
     }
 
     html {
-      height: 100vh;
+      height: 100%;
     }
 
     body {
@@ -39,6 +39,13 @@
       flex-direction: column;
       flex: 1;
     }
+    @media only screen and (max-width: 375px) {
+      .container {
+        background-image: url("images/bg-mobile.svg");
+        flex-direction: column;
+        padding: 0 40px;
+      }
+    }
 
     .container .logo img {
       margin-top: 65px;
@@ -46,17 +53,46 @@
       height: auto;
     }
 
+    @media only screen and (max-width: 375px) {
+      .container .logo img {
+        margin-top: 30px;
+        width: auto;
+        height: 30%;
+      }
+    }
+
     .content {
       margin-top: 72px;
       display: flex;
     }
 
-    .content .illustration img {
+    @media only screen and (max-width: 375px) {
+      .content {
+        margin-top: 20px;
+        flex-direction: column;
+      }
+    }
+
+
+    @media only screen and (max-width: 375px) {
+      .content .illustration img {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+      }
     }
 
     .content .description {
       margin-top: 50px;
       margin-left: 79px;
+    }
+
+    @media only screen and (max-width: 375px) {
+      .content .description {
+        margin-top: 50px;
+        margin-left: 0px;
+        text-align: center;
+      }
     }
 
     .content .description h1 {
@@ -67,6 +103,13 @@
       font-size: 38px;
     }
 
+    @media only screen and (max-width: 375px) {
+      .content .description h1 {
+        width: 100%;
+        font-size: 23px;
+      }
+    }
+
     .content .description p {
       width: 89%;
       margin-top: 20px;
@@ -74,6 +117,15 @@
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
       color: #fff;
+    }
+
+    @media only screen and (max-width: 375px) {
+      .content .description p {
+        width: 100%;
+        margin-top: 20px;
+        line-height: 25px;
+        font-size: 15.5px;
+      }
     }
 
     .content .description button {
@@ -89,10 +141,29 @@
       border: 0;
     }
 
+    @media only screen and (max-width: 375px) {
+      .content .description button {
+        font-weight: 400;
+        margin-top: 25px;
+        width: 200px;
+        height: 40px;
+        font-size: 12px;
+      }
+    }
+
     .container .footer  {
       margin: 20px;
       display: flex;
       justify-content: flex-end;
+    }
+
+    @media only screen and (max-width: 375px) {
+      .container .footer  {
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+      }
     }
 
     .container .footer i {
